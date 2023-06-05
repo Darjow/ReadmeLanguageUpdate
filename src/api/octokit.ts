@@ -2,7 +2,7 @@ import { Octokit } from "octokit";
 import { Endpoints } from "@octokit/types";
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB_API_KEY,
+  auth: process.env.GH_API_KEY,
 });
 
 type Repos = Endpoints["GET /user/repos"]["response"];
