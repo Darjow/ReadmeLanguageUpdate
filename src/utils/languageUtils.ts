@@ -1,4 +1,4 @@
-type Repos = import("@octokit/types").Endpoints["GET /user/repos"]["response"];
+import { Repos } from "api/types";
 
 export function calculateLanguageDistribution(repositories: Repos): Record<string, number> {
   const languageDistribution: Record<string, number> = {};

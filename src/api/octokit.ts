@@ -1,12 +1,11 @@
 import { Octokit } from "octokit";
 import { Endpoints } from "@octokit/types";
+import { RepoContent, Repos } from "./types";
 
 const octokit = new Octokit({
   auth: process.env.GH_API_KEY,
 });
 
-type Repos = Endpoints["GET /user/repos"]["response"];
-type RepoContent = Endpoints["GET /repos/{owner}/{repo}/contents/{path}"]["response"];
 
 export async function getRepositories(): Promise<Repos> {
   return await octokit.request("GET /user/repos", { type: "owner" });

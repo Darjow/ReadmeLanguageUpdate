@@ -9,7 +9,6 @@ const README = "README.md";
 async function run() {
   try {
     const repositories = await getRepositories();
-
     const languagePercentages = calculateLanguageDistribution(repositories);
     const markdownOutput = generateMarkdown(languagePercentages);
 
