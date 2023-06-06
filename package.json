@@ -8,6 +8,10 @@
     "build": "tsc -p tsconfig.json"
 
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Darjow/ReadmeLanguageUpdate.git"
+  },
   "dependencies": {
     "@octokit/types": "9.2.3",
     "dotenv": "^16.1.4",
