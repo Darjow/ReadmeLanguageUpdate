@@ -1,5 +1,4 @@
 import { Octokit } from "octokit";
-import { Endpoints } from "@octokit/types";
 import { RepoContent, Repos } from "./types";
 
 const octokit = new Octokit({
@@ -7,7 +6,7 @@ const octokit = new Octokit({
 });
 
 
-export async function getRepositories(): Promise<Repos> {
+export async function getRepositories(): Promise<Repos> { 
   return await octokit.request("GET /user/repos", { type: "owner" });
 }
 
